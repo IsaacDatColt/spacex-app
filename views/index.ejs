@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+   
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Company Info</p>
+            <ul>
+              <li><strong>Name:</strong> <%= company.name %></li>
+              <li><strong>Founder:</strong> <%= company.founder %></li>
+              <li><strong>Founded:</strong> <%= company.founded %></li>
+              <li><strong>Employees:</strong> <%= company.employees %></li>
+              <li><strong>Vehicles:</strong> <%= company.vehicles %></li>
+              <li><strong>Launch Sites:</strong> <%= company.launch_sites %></li>
+              <li><strong>Test Sites:</strong> <%= company.test_sites %></li>
+              <li><strong>CEO:</strong> <%= company.ceo %></li>
+              <li><strong>CTO:</strong> <%= company.cto %></li>
+              <li><strong>COO:</strong> <%= company.coo %></li>
+              <li><strong>CTO Propulsion:</strong> <%= company.cto_propulsion %></li>
+              <li><strong>Valuation:</strong> <%= company.valuation %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Headquarters</p>
+            <ul>
+              <li><strong>Address:</strong> <%= company.headquarters.address %></li>
+              <li><strong>City:</strong> <%= company.headquarters.city %></li>
+              <li><strong>State:</strong> <%= company.headquarters.state %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Links</p>
+            <ul>
+              <li><strong>Website:</strong> <a href="<%= company.links.website %>"><%= company.links.website %></a></li>
+              <li><strong>Flickr:</strong> <a href="<%= company.links.flickr %>"><%= company.links.flickr %></a></li>
+              <li><strong>Twitter:</strong> <a href="<%= company.links.twitter %>"><%= company.links.twitter %></a></li>
+              <li><strong>Elon Musk Twitter:</strong> <a href="<%= company.links.elon_twitter %>"><%= company.links.elon_twitter %></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column is-12">
+        <div class="card">
+          <div class="card-content">
+            <p class="title is-4">Summary</p>
+            <p><%= company.summary %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

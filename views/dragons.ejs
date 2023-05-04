@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crew</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+</head>
+<body>
+    <div class="columns is-multiline">
+        <% for (let i = 0; i < dragons.length; i++) { %>
+          <div class="column is-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="<%= dragons[i].flickr_images[0] %>" alt="<%= dragons[i].name %>">
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-4"><%= dragons[i].name %></p>
+                <p class="subtitle is-6"><%= dragons[i].type %></p>
+                <div class="content">
+                 <strong>'Description:'</strong>  <%= dragons[i].description %>
+                </div>
+              </div>
+              <% /* adding id and status */ %>
+              <div class="id"><%= 'ID:  ' %><%= dragons[i].id %></div>
+              <div class="status"><%= 'Status:' %><%= dragons[i].status %></div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+      
+      
+</body>
+</html>
